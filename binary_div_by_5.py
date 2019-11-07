@@ -1,8 +1,8 @@
 '''
 PROBLEM STATEMENT
 take a string of comma-separated 4-digit binary numbers and return
-<< THIS IS SOME TEST COMMENT >>
 the numbers that are divisible by 5 as comma-separated values
+<< This is what should have been there >>
 '''
 
 
@@ -12,5 +12,4 @@ def return_bin_div_by_5(instr):
     return l_binary_div_5
 
 z = input("enter a string of binary number separated by commas >> ")
-# this is just for fun 
 print(return_bin_div_by_5(z))
