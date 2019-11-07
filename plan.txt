@@ -1,0 +1,63 @@
+PROJECT PLAN :
+SWIFTLIB
+
+-> BRIEF
+Swiftlib is a web application to manage and administer libraries.
+Users can maintain an online repository of books and library members.
+We can use this software to issue books and accept returns of books, with all relevant data such as time borrowed, fee, duration, etc.
+It's easy and simple to use for regular people.
+
+-> COMPONENTS
+1) Books
+2) Users
+    a) Library Members
+    b) Library Administrators
+3) Issues (whole component will handle issuing books, returning books, etc)
+4) Authors
+
+-> PACKAGES USED
+1) Django 2.1
+2) Mysql Client
+3) Bootstrap 4.3.1
+
+-> SAILENT FEATURES
+1) Member history
+2) Fee Collection and record ( late fees applicable as well )
+3) Good User Interface
+
+=> Core Principle of Django ( MVT )
+
+
+===> MODELS
+
+1) Authors
+    -> ID (pkey)
+    -> Name
+
+2) Books
+    -> ID (pkey)
+    -> Name
+    -> Author (fkey Authors)
+    -> ISBN-10
+    -> ISBN-13
+    -> CostPrice 
+    -> RentalPrice
+    -> Qty-Available
+
+3) Users
+    -> ID (pkey)
+    -> Name
+    -> Books_issued
+    -> unique_id
+
+4) Issues
+    -> ID (pkey)
+    -> Date_Issued (DDMMYYYY HHMMSS 24h)
+    -> Date_Returned (DDMMYYYY HHMMSS 24h)
+    -> User_issued (fkey Users)
+    -> Book_Issued (fkey Books)
+    -> returned (y/n)
+
+
+
+
